@@ -1,0 +1,243 @@
+@import "libs"
+@import "fonts"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.5
+	font-family: $default-font
+	overflow-x: hidden
+	background-color: $backg-color
+	opacity: 1
+.font
+	font-family: Helvetica, sans-serif
+	font-weight: bold		
+h1,h2 ,h3,h4,p
+	@extend .font
+p
+	margin: 0	
+	font-weight: normal		
+	display: inline-block
+	text-align: justify
+	color: $dark-grey-color
+	line-height: 1.2
+
+h1
+	font-size: 2.3rem
+	line-height: 40pt
+h2
+	font-size: 1rem
+	text-transform: uppercase
+	letter-spacing: .1rem
+h3
+	@extend h2
+	letter-spacing: -.1rem
+	font-size: 1.15rem
+h4
+	line-height: 14pt
+	font-size: 1rem
+ol,ul
+	margin: 0
+	padding-left: 1.2rem	
+blockquote
+	margin: 0	
+.button
+	display: inline-block	
+img	
+	display: inline-block
+	max-width: 100%
+	height: auto
+.no-padding
+	padding: 0	
+.main-container
+	background-color: $white-color
+	padding: 0 30px
+	position: relative
+	z-index: 10
+	max-width: 1056px
+	margin: 0 auto
+@import "header"	
+@import "carusel" 
+.topStories
+	h2
+		margin-top: 15px
+		margin-bottom: 10px
+		color: $blue-color
+
+.footer-line
+	position: relative
+	z-index: 10
+	margin: 0 
+	margin: 0 -30px
+.fotter-rainbow 
+	background-image: url("../img/fotter-rainbow.png");
+	position: relative;
+	bottom: 0
+	height: 5px
+.rainbow-bottom
+	img
+		position: relative
+		transform: translateY(-150px)
+		overflow: hidden
+.design-wrap
+	p
+		text-align: center
+		width: 100%
+		margin: 35px 0
+		color: $grey-color
+#post
+	margin-top: 30px
+	padding-left: 5px
+	padding-right: 8px
+	h1
+		padding-left: 5px
+	span
+		color: #fff
+		text-align: center
+	.days
+		background-color: $orange-color
+		width: 65px
+		line-height: 44px
+	.month
+		line-height: 24px
+		margin-left: 5px
+		background-color: $blue-color
+		font-size: 1rem
+		text-transform: uppercase
+	.time
+		position: absolute
+		left: -65px
+		display: inline-flex
+		flex-direction: column
+	.img-data
+		padding: 11px
+		border: solid 1px $grey-color
+		margin: 0 -8px 0 -5px
+		margin-top: 16px
+	.article-bot
+		display: inline-flex
+		margin-top: 10px
+		width: 100%
+		img
+			&:first-child
+				margin-left: 0
+			margin: 0 1.2%
+			width: 23.012%
+			height: 23.012%
+	.after-post
+		margin: 6px
+		span
+			color: $grey-color
+			i
+				margin-left: 25px
+				margin-right: 5px
+				color: $orange-color
+		.read
+			float: right
+.older
+	p
+		color: $grey-color
+	i
+		font-size: 8px
+		vertical-align: middle
+	margin-bottom: 25px
+#sidebar
+ padding-left: 10px	
+.top-stories, .like
+	h2
+		margin-top: 25px
+		margin-bottom: 0
+		display: inline-block
+		background-color: $purpul-color
+		padding: 15px 8px
+		color: #fff
+
+	a
+		color: #fff
+	color: #fff	
+	h3
+		margin-top: 5px	
+		display: block
+	p
+		color: $dark-grey-color
+	.tab-head
+		a
+			width: 2%
+			display: table-cell
+			&:first-child
+				h3
+					background-color: $pink-color
+			&:nth-child(2)
+				h3
+					background-color: $orange-color	
+			&:last-child		
+				h3
+					background-color: $blue-color	
+	.tab-body
+		position: relative
+		padding-left: 10px
+		left: 0
+		float: left
+		width: 100%
+		color: #000
+		img,h4,p
+			display: inline-block
+		h4,p
+			margin-top: 5px
+			padding-left: 5px
+		h4
+			color: $blue-color
+		.content-item
+			padding: 0 10px
+			margin: 14px 0			
+.like
+	h2
+	 	display: inline-block
+	 	width: 100%
+	.content-item
+		.col
+			p:last-child
+				color: $blue-color
+	.older
+		margin-bottom: 0
+.archives
+	@extend .like
+	.content-item
+		i
+			position: absolute
+			left: 5px
+			color: $purpul-color
+			transform: scaleX(.7)
+		hr
+			margin: 5px 0	
+		margin: 12px 0
+		p
+			padding-right: 10px
+		padding-left: 25px				
+@import "media" // Всегда в конце

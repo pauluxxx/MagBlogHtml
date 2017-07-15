@@ -1,0 +1,79 @@
+
+@import "vars"
+.carousel
+	max-width: 100% /* ширина всего блока */
+	margin: 0 auto
+	width: 100%
+	.carousel-wrapper 
+		//margin: 0 50px; /* отступы для стрелок */
+		overflow: hidden; /* скрываем содержимое, выходящее за рамки основной области */
+		position: relative;
+	.carousel-items 
+		width: 12000px; /* устанавливаем большую ширину для набора элементов */
+		position: relative; /* позиционируем блок относительно основной области карусели */
+	.carousel-block 
+		float: left; /* выстраиваем все элементы карусели в ряд */
+		width: $carousel-block-width; /* задаём ширину каждого элемента */
+		height: 100%;
+		overflow: hidden;
+		padding: 0 5px; /* делаем оступы, чтобы элементы не сливались */
+		.work 
+			position: relative
+			img  
+				width: 100%
+				height: $carousel-block-height;/* Назначаем высоту изображения */
+			.info
+				width: 100%
+				position: relative				
+				bottom: 1%
+				color: #000
+				text-align: center
+			p 
+		
+	.carousel-button-left, .carousel-button-right
+		position: absolute;
+		top: 191px; 
+		cursor: pointer; 
+		text-decoration: none
+		z-index: 2
+		font-size: 1.5rem
+
+	.carousel-button-left
+			left: -22px
+			a
+				color: $blue-color
+				display: inline-block
+			transform: rotate(180deg) scaleX(.7)
+	.carousel-button-right
+			right: -22px
+			a
+				color: $pink-color
+			transform: scaleX(.7)
+	.carousel-block	
+		.info
+			margin-top: 5px
+		h2
+			i
+				margin-right: 10px
+				transform: scaleX(.7)
+			width: 100%
+			color: white
+			margin: 0
+			line-height: 38px
+			padding-left: 10px
+			text-align: left
+			transition: all ease 1s
+		p
+			margin-top: 12px
+		&:nth-child(1)
+			h2
+				background-color: $blue-color
+		&:nth-child(2)
+			h2
+				background-color: $orange-color
+		&:nth-child(3)
+			h2
+				background-color: $pink-color
+		&:nth-child(4)
+			h2
+				background-color: $purpul-color		
